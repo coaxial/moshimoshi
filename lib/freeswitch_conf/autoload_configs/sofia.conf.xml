@@ -1,0 +1,48 @@
+<configuration name="sofia.conf">
+  <profiles>
+    <profile name="external">
+      <settings>
+        <param name="ext-rtp-ip" value="$${external_ip}"/>
+        <param name="ext-sip-ip" value="$${external_ip}"/>
+
+        <param name="rtp-ip" value="$${local_ip_v4}"/>
+        <param name="sip-ip" value="$${local_ip_v4}"/>
+
+        <param name="sip-port" value="$${external_sip_port}"/>
+        <param name="bind-params" value="transport=udp"/>
+
+        <param name="inbound-codec-prefs" value="$${global_codec_prefs}"/>
+        <param name="outbound-codec-prefs" value="$${global_codec_prefs}"/>
+
+        <param name="context" value="default"/>
+        <param name="disable-register" value="true"/>
+        <param name="rtp-timer-name" value="soft"/>
+      </settings>
+
+      <gateways>
+        <!-- Insert gateways here! -->
+      </gateways>
+    </profile>
+
+    <profile name="internal">
+      <settings>
+        <!--<param name="ext-rtp-ip" value="$${local_ip_v4}"/>-->
+        <param name="ext-rtp-ip" value="$${internal_ip}"/>
+        <!--<param name="ext-sip-ip" value="$${local_ip_v4}"/>-->
+        <param name="ext-sip-ip" value="$${internal_ip}"/>
+
+        <param name="rtp-ip" value="$${local_ip_v4}"/>
+        <param name="sip-ip" value="$${local_ip_v4}"/>
+
+        <param name="sip-port" value="$${internal_sip_port}"/>
+        <param name="bind-params" value="transport=udp"/>
+
+        <param name="inbound-codec-prefs" value="$${global_codec_prefs}"/>
+        <param name="outbound-codec-prefs" value="$${global_codec_prefs}"/>
+
+        <param name="context" value="default"/>
+        <param name="rtp-timer-name" value="soft"/>
+      </settings>
+    </profile>
+  </profiles>
+</configuration>

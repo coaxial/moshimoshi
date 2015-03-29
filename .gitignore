@@ -1,0 +1,10 @@
+.bundle
+.*.swp
+.*.swo
+.DS_STORE
+log/*.log
+tmp
+vendor/ruby
+log/ahn
+log/freeswitch
+log/freeswitch.log

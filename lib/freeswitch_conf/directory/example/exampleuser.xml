@@ -1,0 +1,7 @@
+<include>
+  <user id="exampleuser">
+    <params>
+      <param name="password" value="examplepass"/>
+    </params>
+  </user>
+</include>

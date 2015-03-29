@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<document type="freeswitch/xml">
+  <X-PRE-PROCESS cmd="include" data="hosts/internal_ip.xml"/>
+  <X-PRE-PROCESS cmd="include" data="hosts/common.xml"/>
+
+  <section name="configuration">
+    <X-PRE-PROCESS cmd="include" data="autoload_configs/*.xml"/>
+  </section>
+
+  <section name="dialplan">
+    <X-PRE-PROCESS cmd="include" data="dialplan.xml"/>
+  </section>
+  
+  <section name="directory">
+    <X-PRE-PROCESS cmd="include" data="directory/*.xml"/>
+  </section>
+</document>

@@ -1,0 +1,5 @@
+<include>
+  <domain name="$${internal_ip}">
+    <X-PRE-PROCESS cmd="include" data="example/*.xml"/>
+  </domain>
+</include>
