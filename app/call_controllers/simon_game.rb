@@ -31,7 +31,7 @@ class SimonGame < Adhearsion::CallController
     if attempt_correct?
       speak 'good'
     else
-      speak "#{@number.length - 1} times wrong, try again smarty"
+      speak "#{@number.length - 1} times wrong, try again Pierre"
       reset
     end
   end
