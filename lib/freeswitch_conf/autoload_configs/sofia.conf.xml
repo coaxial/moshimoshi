@@ -20,7 +20,14 @@
       </settings>
 
       <gateways>
-        <!-- Insert gateways here! -->
+        <gateway name="cwu">
+          <param name="realm" value="sip.callwithus.com"/>
+          <param name="username" value="$${cwu_gateway_username}"/>
+          <param name="password" value="$${cwu_gateway_password}"/>
+          <param name="ping" value="15"/>
+          <param name="ping-min" value="5"/>
+          <param name="ping-max" value="10"/>
+        </gateway>
       </gateways>
     </profile>
 
