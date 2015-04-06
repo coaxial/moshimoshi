@@ -1,7 +1,7 @@
 <include>
   <user id="exampleuser">
     <params>
-      <param name="password" value="examplepass"/>
+      <param name="password" value="$${exampleuser_password}"/>
     </params>
   </user>
 </include>
