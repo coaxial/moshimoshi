@@ -2,6 +2,7 @@
 <document type="freeswitch/xml">
   <X-PRE-PROCESS cmd="include" data="hosts/internal_ip.xml"/>
   <X-PRE-PROCESS cmd="include" data="hosts/common.xml"/>
+  <X-PRE-PROCESS cmd="include" data="hosts/secrets.xml"/>
 
   <section name="configuration">
     <X-PRE-PROCESS cmd="include" data="autoload_configs/*.xml"/>
