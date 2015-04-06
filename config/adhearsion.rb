@@ -26,6 +26,8 @@ Adhearsion.config do |config|
     prod.platform.logging.level = :error
   end
 
+  config.platform.logging.outputters = 'log/ahn/adhearsion.log'
+
   ##
   # Use with Rayo (eg Voxeo PRISM or FreeSWITCH mod_rayo)
   #
