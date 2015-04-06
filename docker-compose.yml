@@ -3,7 +3,7 @@ fs:
   entrypoint: /usr/src/freeswitch_conf/start.sh
   volumes:
     - lib/freeswitch_conf:/usr/src/freeswitch_conf:ro
-    - log:/var/log:rw
+    - log/freeswitch:/var/log:rw
   ports:
     # The port mod_rayo is listening on
     - "5222:5222"
