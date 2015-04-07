@@ -17,8 +17,10 @@ You should also have an account with a VoIP provider to be able to receive and m
 Every username and password used in the FreeSWITCH config files is fetched from `lib/freeswitch_conf/hosts/secrets.xml`. The `secrets.example.xml` can be used as a template.
 
 ## Starting MushiMushi
-`git clone https://github.com/Coaxial/mushimushi.git`
-`fig up -d && fig logs`
+```shell
+$ git clone https://github.com/Coaxial/mushimushi.git
+$ fig up -d && fig logs
+```
 
 boot2docker users should know that the [startup script included in MushiMushi](https://github.com/Coaxial/mushimushi/blob/master/lib/freeswitch_conf/start.sh) checks whether the app is running in a b2d virtual machine. If that's the case, IPs are set accordingly for FreeSWITCH to work.
 
