@@ -3,8 +3,6 @@
 require 'spec_helper'
 require 'call_controllers/outbound_call'
 
-require 'pry'
-
 describe OutboundCall do
 
   describe '#dialled_number' do
