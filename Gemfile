@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'adhearsion', '~> 2.6'
+gem 'voipms_rates', path: 'voipms_rates/'
 
 # Exercise care when updating the Punchblock major version, since Adhearsion
 # apps sometimes make use of underlying features from the Punchblock API.

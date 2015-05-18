@@ -1,0 +1,87 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.voip.ms/rates/xmlapi.php?pattern=15145
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 18 May 2015 14:10:08 GMT
+      Server:
+      - Apache
+      Content-Length:
+      - '166'
+      Content-Type:
+      - text/xml
+    body:
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" encoding="utf-8" ?>
+
+        <error>
+          <code>404</code>
+          <description>No results found</description>
+          <dest></dest>
+          <pattern>15145</pattern>
+        </error>
+    http_version: 
+  recorded_at: Mon, 18 May 2015 14:10:08 GMT
+- request:
+    method: get
+    uri: https://www.voip.ms/rates/xmlapi.php?pattern=1514
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 18 May 2015 14:10:09 GMT
+      Server:
+      - Apache
+      Content-Length:
+      - '396'
+      Content-Type:
+      - text/xml
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="utf-8" ?>
+
+        <results>
+          <item>
+            <short_description>Canada</short_description>
+            <description>Canada - 514 Quebec</description>
+            <pattern>1514</pattern>
+            <rate>0.00520000</rate>
+            <rate_premium>0.00900000</rate_premium>
+            <increment>6</increment>
+            <old_rate>0.00490413</old_rate>
+            <old_rate_change>2009-10-31</old_rate_change>
+          </item>
+        </results>
+    http_version: 
+  recorded_at: Mon, 18 May 2015 14:10:09 GMT
+recorded_with: VCR 2.9.3
