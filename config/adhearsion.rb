@@ -31,6 +31,7 @@ Adhearsion.config do |config|
   ##
   # Use with Rayo (eg Voxeo PRISM or FreeSWITCH mod_rayo)
   #
+  # FIXME use env vars
   config.punchblock.username = "adhearsion@fs" # Your XMPP JID for use with Rayo
   config.punchblock.password = "barfoo" # Your XMPP password
 

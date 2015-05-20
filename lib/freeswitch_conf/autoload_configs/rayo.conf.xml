@@ -2,8 +2,8 @@
   <settings>
     <param name="max-idle-sec" value="300"/>
   </settings>
-  <domain name="fs" shared-secret="itsasecret">
+  <domain name="fs" shared-secret="$${rayo_shared_secret}">
     <listen type="c2s" port="5222" address="$${local_ip_v4}" acl=""/>
-    <users><user name="adhearsion" password="barfoo"/></users>
+    <users><user name="$${rayo_user_name}" password="$${rayo_user_password}"/></users>
   </domain>
 </configuration>
