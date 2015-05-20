@@ -5,6 +5,7 @@ fs:
     - lib/freeswitch_conf:/usr/src/freeswitch_conf:ro
     - log/freeswitch:/var/log:rw
     - assets/:/usr/share/assets:ro
+    - recordings:/var/lib/freeswitch/recordings:rw
   ports:
     # The port mod_rayo is listening on
     - "5222:5222"
