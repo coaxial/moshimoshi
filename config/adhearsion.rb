@@ -41,4 +41,10 @@ Adhearsion.config do |config|
   # config.punchblock.username = "manager" # Your AMI username
   # config.punchblock.password = "password" # Your AMI password
   # config.punchblock.host = "asterisk.local-dev.mojolingo.com" # Your AMI host
+
+  ##
+  # voipms_rates settings override
+  # config.voipms_rates.canada_use_premium = true
+  # config.voipms_rates.intl_use_premium   = true
+  # config.voipms_rates.rates_endpoint     = "https://www.voip.ms/rates/xmlapi.php"
 end
