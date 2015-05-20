@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
 gem 'adhearsion', '~> 2.6'
-gem 'voipms_rates', '~> 1.0'
 
 # Exercise care when updating the Punchblock major version, since Adhearsion
 # apps sometimes make use of underlying features from the Punchblock API.
@@ -13,6 +12,11 @@ gem 'punchblock', '~> 2.6'
 # See http://adhearsion.com/docs/common_problems#toc_3 for details
 gem 'adhearsion-asr'
 
+# Fetches the per minute rate from voip.ms
+gem 'voipms_rates', '~> 1.0'
+
+# Handles in-call apps
+gem 'matrioska', '~> 0.2'
 #
 # Check http://ahnhub.com for a list of plugins you can use in your app.
 # To use them, simply add them here and run `bundle install`.
