@@ -19,15 +19,20 @@ Adhearsion.config do |config|
 
   config.development do |dev|
     dev.platform.logging.level = :debug
-    dev.platform.logging.outputters = ["log/ahn/adhearsion.log"]
   end
+
+  config.production do |prod|
+    prod.platform.environment = :production
+    prod.platform.logging.level = :error
+  end
+
+  config.platform.logging.outputters = 'log/ahn/adhearsion.log'
 
   ##
   # Use with Rayo (eg Voxeo PRISM or FreeSWITCH mod_rayo)
   #
-  # config.punchblock.port = 5222
-  config.punchblock.username = "adhearsion@fs"
-  config.punchblock.password = "barfoo"
+  config.punchblock.username = "adhearsion@fs" # Your XMPP JID for use with Rayo
+  config.punchblock.password = "barfoo" # Your XMPP password
 
   ##
   # Use with Asterisk
@@ -36,4 +41,10 @@ Adhearsion.config do |config|
   # config.punchblock.username = "manager" # Your AMI username
   # config.punchblock.password = "password" # Your AMI password
   # config.punchblock.host = "asterisk.local-dev.mojolingo.com" # Your AMI host
+
+  ##
+  # voipms_rates settings override
+  # config.voipms_rates.canada_use_premium = true
+  # config.voipms_rates.intl_use_premium   = true
+  # config.voipms_rates.rates_endpoint     = "https://www.voip.ms/rates/xmlapi.php"
 end

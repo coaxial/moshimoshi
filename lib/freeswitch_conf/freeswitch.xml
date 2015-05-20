@@ -1,7 +1,11 @@
 <?xml version="1.0"?>
 <document type="freeswitch/xml">
+  <!-- Sets the value for internal_ip (boot2docker provisions) -->
   <X-PRE-PROCESS cmd="include" data="hosts/internal_ip.xml"/>
+  <!-- Common parameters -->
   <X-PRE-PROCESS cmd="include" data="hosts/common.xml"/>
+  <!-- Contains secrets such as gateways passwords, SIP users passwords etc; cf README -->
+  <X-PRE-PROCESS cmd="include" data="hosts/secrets.xml"/>
 
   <section name="configuration">
     <X-PRE-PROCESS cmd="include" data="autoload_configs/*.xml"/>
