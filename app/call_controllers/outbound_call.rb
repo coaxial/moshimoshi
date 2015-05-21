@@ -17,7 +17,7 @@ class OutboundCallController < Adhearsion::CallController
       # The path to the file is the path on the FreeSWITCH machine. Only WAV files seem to play.
       ringback: "file:///usr/share/assets/us_ringback_tone.wav"
     } do |runner, dial|
-      # Records a call and saves it to Google Drive
+      # Records a call, uploads it to S3 and emails the link
       runner.map_app '*7' do
         record_call_via_controller dial
       end
