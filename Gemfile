@@ -16,7 +16,8 @@ gem 'adhearsion-asr'
 gem 'voipms_rates', '~> 1.0'
 
 # Handles in-call apps
-gem 'matrioska', '~> 0.2'
+# gem 'matrioska', '~> 0.2'
+gem 'matrioska', path: 'matrioska/'
 
 # Lets you `require_all '<dir>'`
 gem 'require_all', '~> 1.3'
