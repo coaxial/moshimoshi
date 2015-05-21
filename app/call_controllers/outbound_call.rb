@@ -19,8 +19,7 @@ class OutboundCallController < Adhearsion::CallController
     } do |runner, dial|
       # Records a call and saves it to Google Drive
       runner.map_app '*7' do
-        # record_call_via_controller dial
-        record_call
+        record_call_via_controller dial
       end
     end
     logger.info "Call to #{@dialled_number} ended."
@@ -31,14 +30,6 @@ class OutboundCallController < Adhearsion::CallController
   def extract_dialled_number
     number = call.to.match(/(\d*)@.*/)[1]
     @dialled_number = number.empty? ? 'no digits' : number
-  end
-
-  def record_call
-    logger.info "Recording requested"
-    play_audio "file:///usr/share/assets/beep.wav"
-    record async: true, start_beep: true do |event|
-      logger.info "Recording saved to #{event.recording.uri}"
-    end
   end
 
   def record_call_via_controller(dial)
