@@ -24,6 +24,9 @@ an account with a VoIP provider to be able to receive and make calls.
 Every username and password used in the FreeSWITCH config files is fetched from
 `lib/freeswitch_conf/hosts/secrets.xml`. The `secrets.example.xml` can be used as a template.
 
+Adhearsion environment variables also need to be set in `lib/ahn/.env`. The provided `.env.example` file should be
+used as a template.
+
 ## Starting MushiMushi
 
 `git clone https://github.com/Coaxial/mushimushi.git`

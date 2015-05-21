@@ -17,10 +17,15 @@ gem 'voipms_rates', '~> 1.0'
 
 # Handles in-call apps
 # gem 'matrioska', '~> 0.2'
+# Using a local version because the `develop` branch contains major fixes that aren't in `master`
 gem 'matrioska', path: 'matrioska/'
 
 # Lets you `require_all '<dir>'`
 gem 'require_all', '~> 1.3'
+
+# To store recordings on S3
+gem 'aws-sdk', '~> 2'
+
 #
 # Check http://ahnhub.com for a list of plugins you can use in your app.
 # To use them, simply add them here and run `bundle install`.
