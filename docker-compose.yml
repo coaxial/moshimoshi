@@ -123,6 +123,7 @@ ahn:
   volumes:
 <<<<<<< Updated upstream
     - .:/usr/src/app
+    - recordings:/var/lib/freeswitch/recordings:rw
   command: /usr/src/app/lib/ahn/start.sh
 =======
     - recordings:/var/lib/freeswitch/recordings:rw
