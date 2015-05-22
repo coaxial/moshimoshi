@@ -16,9 +16,7 @@ gem 'adhearsion-asr'
 gem 'voipms_rates', '~> 1.0'
 
 # Handles in-call apps
-# gem 'matrioska', '~> 0.2'
-# Using a local version because the `develop` branch contains major fixes that aren't in `master`
-gem 'matrioska', path: 'matrioska/'
+gem 'matrioska', '~> 0.3'
 
 # Lets you `require_all '<dir>'`
 gem 'require_all', '~> 1.3'
