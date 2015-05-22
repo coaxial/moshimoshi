@@ -24,7 +24,7 @@ class RecordingController < Adhearsion::CallController
       logger.info "Recording saved at #{public_url}"
 
       File.delete(@path_to_file) unless public_url.empty?
-      logger.warn "Couldn't save recording to S3, the file has been kept at #{@path_to_file}" unless public_url.empty?
+      logger.warn "Couldn't save recording to S3, the file has been kept at #{@path_to_file}" if public_url.empty?
 
       EmailHelper.send_recording public_url, @recording_metadata
     end
