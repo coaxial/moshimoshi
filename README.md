@@ -46,8 +46,8 @@ running in a b2d virtual machine. If that's the case, IPs are set accordingly fo
 To record an outgoing call, press `*7` at any time during the call. A beep will play (audible only to the caller, i.e.
 the party who initiated the call) and the recording will start.
 
-Once the call is hung up, the recording is uploaded to the cloud (Amazon S3) and an email is sent with the link to the
-recording file. Recordings are kept on S3 for 9 months after which they are deleted.
+Once the call is hung up, the recording is uploaded to the cloud (Amazon S3) and an email is sent with the link to
+download it. Recordings are kept on S3 for 9 months, after which they are deleted.
 
 ## Local DIDs
 
