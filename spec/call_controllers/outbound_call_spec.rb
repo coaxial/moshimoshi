@@ -13,7 +13,6 @@ describe OutboundCallController do
       subject { OutboundCallController.new(mock_call) }
 
       it 'extracts the dialled number' do
-        dialled_number = subject.instance_variable_get(:@dialled_number)
         expect(subject.extract_dialled_number).to eq(number_to_dial)
       end
     end
@@ -25,7 +24,6 @@ describe OutboundCallController do
       subject { OutboundCallController.new(mock_call) }
 
       it 'returns "no digits"' do
-        dialled_number = subject.instance_variable_get(:@dialled_number)
         expect(subject.extract_dialled_number).to eq('no digits')
       end
     end

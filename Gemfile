@@ -24,6 +24,13 @@ gem 'require_all', '~> 1.3'
 # To store recordings on S3
 gem 'aws-sdk', '~> 2'
 
+# To send emails
+gem 'postmark', '~> 1.5'
+
+# To compile HAML files
+gem 'haml', '~> 4.0'
+gem 'tilt', '~> 2.0'
+
 #
 # Check http://ahnhub.com for a list of plugins you can use in your app.
 # To use them, simply add them here and run `bundle install`.
@@ -31,4 +38,5 @@ gem 'aws-sdk', '~> 2'
 
 group :development, :test do
   gem 'rspec'
+  gem 'timecop'
 end
