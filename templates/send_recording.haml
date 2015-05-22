@@ -1,0 +1,15 @@
+!!! 5
+%html
+  %body
+    %h1
+      Hello!
+
+    %p
+      %a(href=@public_url) Here
+      is the recording of today's call to #{@recording_metadata[:to]}. You called from #{@recording_metadata[:from]} at #{@recording_metadata[:time]}.
+    
+    %p
+      This recording will be archived after 6 months. Once archived, it can still be accessed but will take a few hours to be retrieved.
+    
+    %p
+      Thank you for using MoshiMoshi!
