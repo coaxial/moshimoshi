@@ -65,7 +65,7 @@ GEM
       unf (>= 0.0.5, < 1.0.0)
     equalizer (0.0.9)
     eventmachine (1.0.7)
-    ffi (1.9.6)
+    ffi (1.9.8)
     future-resource (1.1.0)
     girl_friday (0.11.2)
       connection_pool (~> 1.0)
@@ -186,3 +186,6 @@ DEPENDENCIES
   tilt (~> 2.0)
   timecop
   voipms_rates (~> 1.0)
+
+BUNDLED WITH
+   1.10.3
