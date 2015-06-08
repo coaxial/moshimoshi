@@ -1,3 +1,8 @@
+[![Code
+Climate](https://codeclimate.com/github/Coaxial/moshimoshi/badges/gpa.svg)](https://codeclimate.com/github/Coaxial/moshimoshi)
+[![Test
+Coverage](https://codeclimate.com/github/Coaxial/moshimoshi/badges/coverage.svg)](https://codeclimate.com/github/Coaxial/moshimoshi/coverage)
+
 # MoshiMoshi
 
 MoshiMoshi is a voice application. A voice application is similar to a web application but deals with VoIP and voice

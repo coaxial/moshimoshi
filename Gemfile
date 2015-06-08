@@ -31,6 +31,9 @@ gem 'postmark', '~> 1.5'
 gem 'haml', '~> 4.0'
 gem 'tilt', '~> 2.0'
 
+# For Date and Time calculations
+gem 'activesupport', '~> 4.2'
+
 #
 # Check http://ahnhub.com for a list of plugins you can use in your app.
 # To use them, simply add them here and run `bundle install`.
@@ -39,4 +42,8 @@ gem 'tilt', '~> 2.0'
 group :development, :test do
   gem 'rspec'
   gem 'timecop'
+end
+
+group :test do
+  gem "codeclimate-test-reporter", require: false
 end
