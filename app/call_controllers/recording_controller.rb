@@ -15,6 +15,11 @@ class RecordingController < Adhearsion::CallController
     record async: true, start_beep: true do |event|
       # The following is exectuted to process the recording once it has stopped
       recording = Source.new(event.recording.uri)
+      logger.debug Adhearsion.config.platform.environment
+      bucket = ENV["AWS_RECORDINGS_BUCKET_DEV"]
+      bucket = ENV["AWS_RECORDINGS_BUCKET_PROD"] if Adhearsion.config.platform.environment == :production
+
+      @recording_metadata[:end_time] = Time.now
 
       if recording.pathname.nil?
         message = "No path extracted from the recording: #{event.recording}"
@@ -22,22 +27,22 @@ class RecordingController < Adhearsion::CallController
         raise message
       end
 
-      public_url = AwsHelper.upload_to_s3(recording.pathname, ENV["AWS_RECORDINGS_BUCKET"])
+      public_url = AwsHelper.upload_to_s3(recording.pathname, bucket)
       logger.info "Recording saved at #{public_url}"
 
       recording.delete unless public_url.empty?
       logger.warn "Couldn't save recording to S3, the file has been kept at #{recording.pathname}" if public_url.empty?
 
-      EmailHelper.send_recording public_url, @recording_metadata
+      EmailHelper.send_email public_url, @recording_metadata
     end
   end
 
   def extract_metadata
     sip_regex = /^sip:(.+)@.*$/i
     @recording_metadata = {
-      from: call.from.match(sip_regex)[1],
-      to:   call.to.match(sip_regex)[1],
-      time: Time.now
+      from:       call.from.match(sip_regex)[1],
+      to:         call.to.match(sip_regex)[1],
+      start_time: Time.now
     }
   end
 end

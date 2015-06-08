@@ -1,6 +1,12 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    actionview (4.2.0)
+      activesupport (= 4.2.0)
+      builder (~> 3.1)
+      erubis (~> 2.7.0)
+      rails-dom-testing (~> 1.0, >= 1.0.5)
+      rails-html-sanitizer (~> 1.0, >= 1.0.1)
     activesupport (4.2.0)
       i18n (~> 0.7)
       json (~> 1.7, >= 1.7.7)
@@ -67,6 +73,7 @@ GEM
     domain_name (0.5.23)
       unf (>= 0.0.5, < 1.0.0)
     equalizer (0.0.9)
+    erubis (2.7.0)
     eventmachine (1.0.7)
     ffi (1.9.8)
     future-resource (1.1.0)
@@ -87,6 +94,8 @@ GEM
     logging (1.8.2)
       little-plugger (>= 1.1.3)
       multi_json (>= 1.8.4)
+    loofah (2.0.2)
+      nokogiri (>= 1.5.9)
     matrioska (0.3.0)
       adhearsion (~> 2.4)
     method_source (0.8.2)
@@ -120,6 +129,14 @@ GEM
       ruby_speech (~> 2.3)
       state_machine (~> 1.0)
       virtus (~> 1.0)
+    rails-deprecated_sanitizer (1.0.3)
+      activesupport (>= 4.2.0.alpha)
+    rails-dom-testing (1.0.6)
+      activesupport (>= 4.2.0.beta, < 5.0)
+      nokogiri (~> 1.6.0)
+      rails-deprecated_sanitizer (>= 1.0.1)
+    rails-html-sanitizer (1.0.2)
+      loofah (~> 2.0)
     rake (10.4.2)
     require_all (1.3.2)
     rest-client (1.8.0)
@@ -182,6 +199,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  actionview
   activesupport (~> 4.2)
   adhearsion (~> 2.6)
   adhearsion-asr

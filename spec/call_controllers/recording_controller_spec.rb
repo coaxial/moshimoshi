@@ -23,7 +23,7 @@ describe RecordingController do
       expect(subject.extract_metadata).to eq({
         from: caller_number,
         to:   callee_number,
-        time: Time.now
+        start_time: Time.now,
       })
     end
   end

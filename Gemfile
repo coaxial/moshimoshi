@@ -33,6 +33,7 @@ gem 'tilt', '~> 2.0'
 
 # For Date and Time calculations
 gem 'activesupport', '~> 4.2'
+gem 'actionview'
 
 #
 # Check http://ahnhub.com for a list of plugins you can use in your app.
