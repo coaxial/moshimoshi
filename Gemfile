@@ -18,7 +18,7 @@ gem 'voipms_rates', '~> 1.0'
 # Handles in-call apps
 gem 'matrioska', '~> 0.3'
 
-# Lets you `require_all '<dir>'`
+# Allows `require_all '<dir>'`
 gem 'require_all', '~> 1.3'
 
 # To store recordings on S3
