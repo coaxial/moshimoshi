@@ -34,9 +34,14 @@ used as a template.
 
 ## Starting MoshiMoshi
 
-`git clone https://github.com/Coaxial/moshimoshi.git`
-
-`fig up -d && fig logs`
+```bash
+git clone https://github.com/Coaxial/moshimoshi.git
+cd moshimoshi
+docker-compose pull
+docker-compose build
+docker-compose up -d
+docker-compose logs
+```
 
 boot2docker users should know that the [startup script included in
 MoshiMoshi](https://github.com/Coaxial/moshimoshi/blob/master/lib/freeswitch_conf/start.sh) checks whether the app is
