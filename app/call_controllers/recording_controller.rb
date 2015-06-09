@@ -12,10 +12,9 @@ class RecordingController < Adhearsion::CallController
     logger.info "Recording requested"
     extract_metadata
     play_audio "file:///usr/share/assets/beep.wav" # This file is on the FreeSWITCH server
-    record async: true, start_beep: true do |event|
+    record async: true, format: 'mp3' do |event|
       # The following is exectuted to process the recording once it has stopped
       recording = Source.new(event.recording.uri)
-      logger.debug Adhearsion.config.platform.environment
       bucket = ENV["AWS_RECORDINGS_BUCKET_DEV"]
       bucket = ENV["AWS_RECORDINGS_BUCKET_PROD"] if Adhearsion.config.platform.environment == :production
 

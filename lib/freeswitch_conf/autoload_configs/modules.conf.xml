@@ -13,5 +13,6 @@
     <load module="mod_rayo"/>
     <load module="mod_ssml"/>
     <load module="mod_flite"/>
+    <load module="mod_shout"/>
   </modules>
 </configuration>
