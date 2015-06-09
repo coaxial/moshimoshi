@@ -14,8 +14,8 @@ class OutboundCallController < Adhearsion::CallController
     dial_with_local_apps "sofia/gateway/voipms/#{@dialled_number}", {
       # FIXME Handle caller id to reflect actual caller's cid
       from: "Test 15145551234",
-      # The path to the file is the path on the FreeSWITCH machine. Only WAV files seem to play.
-      ringback: "file:///usr/share/assets/us_ringback_tone.wav"
+      # The path to the file is the path on the FreeSWITCH machine.
+      ringback: "file:///usr/share/assets/us_ringback_tone.mp3"
     } do |runner, dial|
       # Records a call, uploads it to S3 and emails the link
       runner.map_app '*7' do

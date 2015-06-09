@@ -11,7 +11,7 @@ class RecordingController < Adhearsion::CallController
   def run
     logger.info "Recording requested"
     extract_metadata
-    play_audio "file:///usr/share/assets/beep.wav" # This file is on the FreeSWITCH server
+    play_audio "file:///usr/share/assets/beep.mp3" # This file is on the FreeSWITCH server
     record async: true, format: 'mp3' do |event|
       # The following is exectuted to process the recording once it has stopped
       recording = Source.new(event.recording.uri)
