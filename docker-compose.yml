@@ -118,10 +118,14 @@ fs:
     - "16484:16484/udp"
 
 ahn:
-  image: coaxial/adhearsion
+  build: .
   volumes:
+<<<<<<< Updated upstream
     - .:/usr/src/app
   command: /usr/src/app/lib/ahn/start.sh
+=======
+    - recordings:/var/lib/freeswitch/recordings:rw
+>>>>>>> Stashed changes
   links:
     - fs
 
