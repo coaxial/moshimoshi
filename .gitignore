@@ -9,3 +9,6 @@ log/ahn
 log/freeswitch
 log/freeswitch.log
 lib/freeswitch_conf/hosts/secrets.xml
+recordings/
+lib/ahn/.env
+coverage/
