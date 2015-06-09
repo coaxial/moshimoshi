@@ -1,0 +1,17 @@
+!!! 5
+%html
+  %body
+    %h1
+      Hello!
+
+    %p
+      %a(href=@public_url) Here
+      is today's call recording to #{@number_called_to}, it's #{@recording_duration} long.
+    
+    %p
+      This recording will be available to download until #{@recording_expiry_date}. If you wish to access it after this date, you should keep your own copy.
+    
+    %p
+      Thank you for using MoshiMoshi!
+    %p
+      %a(href='http://moshimoshi.rocks')MoshiMoshi.rocks

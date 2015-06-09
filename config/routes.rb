@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-require 'call_controllers/outbound_call'
+require_all 'app/call_controllers'
 
 Adhearsion.router do
 
