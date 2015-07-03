@@ -1,11 +1,11 @@
 fs:
   image: coaxial/freeswitch:for_adhearsion
-  entrypoint: /usr/src/freeswitch_conf/start.sh
+  entrypoint: ["/usr/src/freeswitch_conf/start.sh"]
   volumes:
-    - lib/freeswitch_conf:/usr/src/freeswitch_conf:ro
-    - log/freeswitch:/var/log:rw
+    - lib/freeswitch_conf/:/usr/src/freeswitch_conf:ro
+    - log/freeswitch/:/var/log:rw
     - assets/:/usr/share/assets:ro
-    - recordings:/var/lib/freeswitch/recordings:rw
+    - recordings/:/var/lib/freeswitch/recordings:rw
   ports:
     # The port mod_rayo is listening on
     - "5222:5222"
@@ -121,7 +121,7 @@ fs:
 ahn:
   build: .
   volumes:
-    - recordings:/var/lib/freeswitch/recordings:rw
+    - recordings/:/var/lib/freeswitch/recordings:rw
   links:
     - fs
 
