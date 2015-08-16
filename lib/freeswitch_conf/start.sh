@@ -5,8 +5,8 @@ cp -R /usr/src/freeswitch_conf /etc/freeswitch/
 printf 'Done.\n'
 
 printf 'Determining internal_ip value...\n'
-if [ "$(ping 192.168.59.103 -c 1 -w 1 | grep '100%')" = "" ]; then
-  INTERNAL_IP='192.168.59.103'
+if [ "$(ping 192.168.99.100 -c 1 -w 1 | grep '100%')" = "" ]; then
+  INTERNAL_IP='192.168.99.100'
 else
   INTERNAL_IP='$${local_ip_v4}'
 fi
