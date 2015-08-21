@@ -33,7 +33,7 @@ gem 'tilt', '~> 2.0'
 
 # For Date and Time calculations
 gem 'activesupport', '~> 4.2'
-gem 'actionview'
+gem 'actionview', '~> 4.2.3'
 
 #
 # Check http://ahnhub.com for a list of plugins you can use in your app.
@@ -41,8 +41,10 @@ gem 'actionview'
 #
 
 group :development, :test do
-  gem 'rspec'
-  gem 'timecop'
+  gem 'rspec', '~> 3.3.0'
+  gem 'timecop', '~> 0.8.0'
+  gem 'vcr', '~> 2.9.3'
+  gem 'webmock', '~> 1.21.0'
 end
 
 group :test do
