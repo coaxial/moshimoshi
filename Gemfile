@@ -28,7 +28,7 @@ gem 'aws-sdk', '~> 2'
 gem 'postmark', '~> 1.5'
 
 # To compile HAML files
-gem 'haml', '~> 4.0'
+gem 'haml', '~> 5.0'
 gem 'tilt', '~> 2.0'
 
 # For Date and Time calculations
